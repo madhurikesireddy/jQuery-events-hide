@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery hide</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	//hide and show image when you click the button
+		$("#hide").click(function(){
+			$("#im").hide();
+			
+		});
+		$("#show").click(function(){
+			$("#im").show();
+			
+		});
+	//The optional speed parameter specifies the speed of the hiding/showing, and can take the following values: "slow", "fast", or milliseconds.
+		$("#hide1").click(function(){
+			$("#img1").hide(3000);
+			
+		});
+		$("#hide1").click(function(){
+			$("#img2").hide(1000);
+			
+		});
+		$("#show1").click(function(){
+			$("#img1").show(1000);
+			
+		});
+		$("#show1").click(function(){
+			$("#img2").show(2000);
+			
+		});
+	//you can toggle between the hide() and show() methods with the toggle() method.
+		$("#toogle").click(function(){
+			$("#img3").toggle(1000);
+			});
+	});
+		
+	</script>
+</head>
+<body>
+<button id="hide">Hide</button>
+<button id="show">Show</button><br>
+<img id="im" src="baby1.png" width="200px" height="200px"><br>
+<button id="hide1">Hide</button>
+<button id="show1">Show</button><br>
+<img id="img1" src="baby2.png" width="200px" height="200px"><br>
+<img id="img2" src="baby3.png" width="200px" height="200px"><br>
+<button id="toogle">Toggle for Hide&Show </button><br>
+<img id="img3" src="baby4.png" width="200px" height="200px">
+
+</body>
+</html>

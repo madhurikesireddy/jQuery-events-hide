@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery events</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		
+		//The function is executed when the user clicks on the HTML element.
+		$("p").click(function(){
+			$("#clk").hide();
+			
+		});
+		//The function is executed when the user double-clicks on the HTML element
+		$("p").dblclick(function(){
+			$("#dblc").hide();
+			
+		});
+		//The function is executed when the mouse pointer leaves the HTML element
+		$("#p1").mouseleave(function(){
+			alert("bye! bye! have a nice day");
+			
+		});
+		//The function is executed when the mouse pointer enters the HTML element
+		$("#p2").mouseenter(function(){
+			alert("hahahahahahaha");
+			
+		});
+		//The function is executed, when the left, middle or right mouse button is pressed down, while the mouse is over the HTML element
+		$("#p3").mousedown(function(){
+			alert("hiiiiiiiiiiiiiiiii");	
+		});
+		//The function is executed, when the left, middle or right mouse button is released, while the mouse is over the HTML element
+		$("#p4").mouseup(function(){
+			alert("hellooooooooooo");
+		});
+		//The first function is executed when the mouse enters the HTML element, and the second function is executed when the mouse leaves the HTML element
+		$("#p5").hover(function(){
+			alert("first popup!");
+			},
+			function(){
+				alert("second popup!");
+		});
+		//The focus()function is executed when the form field gets focus
+		//The blur()function is executed when the form field loses focus
+		$("input").focus(function(){
+			$(this).css("background-color", "#ccc");
+			});
+		$("input").blur(function(){
+			$(this).css("background-color", "white");
+			});	
+		//The on() method attaches one or more event handlers for the selected elements.
+		$("h1").on({
+			click: function(){
+			$(this).css("color","yellow");
+			},
+			mouseenter: function(){
+			$(this).css("color","blue");
+			},
+			mouseleave: function(){
+			$(this).css("color","red");
+			}
+			});
+			
+	});
+	</script>
+</head>
+<body>
+<p id="clk">click me</p>
+<p id="dblc">click me two times(double click event)</p>
+<p id="p1">mouseleave event</p>
+<p id="p2">mouseenter event</p>
+<p id="p3">mousedown event</p>
+<p id="p4">mouseup event</p>
+<p id="p5">hover event</p><br>
+first name : <input type="text" name="firstname"><br>
+last name : <input type="text" name="lastname"><br>
+<h1>on()method</h1>
+
+
+<h1>
+</body>
+</html>
